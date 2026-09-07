@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samar Sandhu — Google Ads & Canva Poster Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<noscript><style>.reveal{opacity:1 !important; transform:none !important;}</style></noscript>
+<style>
+  :root{
+    --navy:#1B1464;
+    --navy-2:#211a72;
+    --blue:#1E3A8A;
+    --blue-light:#3B5FE0;
+    --purple:#6D28D9;
+    --purple-light:#8B5CF6;
+    --bg:#F6F7FE;
+    --card:#FFFFFF;
+    --tint-blue:#EEF1FD;
+    --tint-purple:#F3EEFD;
+    --text-dark:#1E2333;
+    --text-gray:#5B6274;
+    --text-muted:#93980;
+    --radius:16px;
+    --shadow: 0 12px 28px rgba(27,20,100,0.10);
+    --shadow-lg: 0 20px 45px rgba(27,20,100,0.22);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    color:var(--text-dark);
+    background:var(--bg);
+    line-height:1.55;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    margin:0;
+    color:var(--text-dark);
+    font-weight:600;
+  }
+  p{margin:0;}
+  a{text-decoration:none;color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  section{padding:110px 0;}
+  .eyebrow{
+    font-size:13px;
+    font-weight:700;
+    color:var(--purple);
+    letter-spacing:0.04em;
+    margin-bottom:10px;
+  }
+  .section-title{
+    font-size:38px;
+    line-height:1.15;
+    max-width:640px;
+    margin-bottom:18px;
+  }
+  .section-lede{
+    font-size:16.5px;
+    color:var(--text-gray);
+    max-width:560px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 28px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:15px;
+    border:none;
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--purple-light);
+    color:#fff;
+    box-shadow:0 14px 30px rgba(139,92,246,0.35);
+  }
+  .btn-primary:hover{box-shadow:0 18px 36px rgba(139,92,246,0.45);}
+  .btn-ghost{
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.35);
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:100;
+    background:rgba(27,20,100,0.0);
+    backdrop-filter:blur(0px);
+    transition:background .25s ease, backdrop-filter .25s ease, box-shadow .25s ease;
+  }
+  header.scrolled{
+    background:rgba(15,11,58,0.85);
+    backdrop-filter:blur(10px);
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  }
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 32px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .logo{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:19px;
+    color:#fff;
+    letter-spacing:0.01em;
+  }
+  .logo span{color:var(--purple-light);}
+  .nav-links{display:flex;gap:34px;}
+  .nav-links a{
+    font-size:14.5px;
+    font-weight:500;
+    color:rgba(255,255,255,0.82);
+    transition:color .15s ease;
+  }
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{
+    padding:10px 22px;
+    border-radius:999px;
+    background:var(--purple-light);
+    color:#fff;
+    font-weight:700;
+    font-size:14px;
+  }
+  .menu-toggle{
+    display:none;
+    background:none;border:none;color:#fff;font-size:22px;cursor:pointer;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:radial-gradient(circle at 18% 20%, #241c86 0%, var(--navy) 45%, #140c50 100%);
+    padding:190px 0 130px;
+    overflow:hidden;
+    color:#fff;
+  }
+  .hero::before, .hero::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(0px);
+  }
+  .hero::before{
+    width:520px;height:520px;
+    background:rgba(59,95,224,0.35);
+    top:-220px;left:-180px;
+  }
+  .hero::after{
+    width:460px;height:460px;
+    background:rgba(139,92,246,0.32);
+    bottom:-220px;right:-140px;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-badges{
+    display:flex;
+    gap:10px;
+    margin-bottom:26px;
+  }
+  .hero-badge{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.18);
+    font-size:12.5px;
+    font-weight:600;
+    color:#D9DBFF;
+  }
+  .hero h1{
+    font-size:58px;
+    line-height:1.06;
+    color:#fff;
+    margin-bottom:20px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:#C7B9FF;
+  }
+  .hero p.lede{
+    font-size:17.5px;
+    color:#C9CBEF;
+    max-width:460px;
+    margin-bottom:34px;
+  }
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px;}
+  .hero-stats{
+    display:flex;
+    gap:34px;
+  }
+  .hero-stats div strong{
+    display:block;
+    font-family:'Fraunces', serif;
+    font-size:26px;
+    color:#fff;
+  }
+  .hero-stats div span{
+    font-size:12.5px;
+    color:#A9ACD9;
+  }
+
+  .hero-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:20px;
+    padding:28px;
+    backdrop-filter:blur(6px);
+  }
+  .hero-card-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:22px;
+  }
+  .hero-card-head span{
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.04em;
+    color:#A9ACD9;
+  }
+  .mini-bars{
+    display:flex;
+    align-items:flex-end;
+    gap:10px;
+    height:110px;
+    margin-bottom:22px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    padding-bottom:12px;
+  }
+  .mini-bars .bar{
+    flex:1;
+    border-radius:5px 5px 0 0;
+    background:var(--blue-light);
+  }
+  .mini-bars .bar.hi{background:var(--purple-light);}
+  .kpi-row{display:flex;justify-content:space-between;padding:9px 0;font-size:13.5px;color:#D9DBFF;}
+  .kpi-row strong{color:#fff;font-family:'Fraunces',serif;font-size:15px;}
+  .hero-card-note{font-size:11px;color:#8386B8;font-style:italic;margin-top:6px;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:64px;
+    align-items:start;
+  }
+  .about-card{
+    background:var(--navy);
+    border-radius:22px;
+    padding:44px 34px;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+  }
+  .about-card::before{
+    content:"";
+    position:absolute;
+    width:200px;height:200px;
+    background:rgba(139,92,246,0.28);
+    border-radius:50%;
+    top:-90px;right:-70px;
+  }
+  .avatar{
+    width:90px;height:90px;
+    border-radius:50%;
+    background:var(--blue-light);
+    border:2px solid rgba(255,255,255,0.7);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;
+    font-size:30px;font-weight:600;
+    margin-bottom:22px;
+    position:relative;z-index:2;
+  }
+  .about-card h3{color:#fff;font-size:22px;margin-bottom:6px;position:relative;z-index:2;}
+  .about-card .role{color:#C7CAF3;font-size:13.5px;margin-bottom:26px;position:relative;z-index:2;}
+  .about-focus{display:flex;flex-direction:column;gap:14px;position:relative;z-index:2;}
+  .about-focus li{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:600;}
+  .about-focus .icon-sm{
+    width:32px;height:32px;border-radius:50%;
+    background:rgba(255,255,255,0.12);
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;
+  }
+  .about-text p{color:var(--text-gray);font-size:16px;margin-bottom:36px;max-width:520px;}
+  .skills-title{font-size:13px;font-weight:700;color:var(--purple);letter-spacing:0.04em;margin-bottom:16px;}
+  .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .skill-card{
+    background:var(--card);
+    border-radius:14px;
+    padding:16px 18px;
+    display:flex;align-items:center;gap:14px;
+    box-shadow:var(--shadow);
+  }
+  .skill-icon{
+    width:42px;height:42px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:16px;flex-shrink:0;
+  }
+  .skill-icon.b{background:var(--blue);}
+  .skill-icon.p{background:var(--purple);}
+  .skill-card span{font-size:14px;font-weight:600;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:#fff;}
+  .services-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    margin-top:50px;
+    align-items:start;
+  }
+  .service-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .service-card{
+    background:var(--bg);
+    border-radius:14px;
+    padding:20px;
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+  }
+  .service-card .skill-icon{width:44px;height:44px;font-size:17px;}
+  .service-card strong{display:block;font-size:14.5px;font-weight:700;line-height:1.35;}
+
+  .dash-panel{
+    background:var(--navy);
+    border-radius:20px;
+    padding:30px;
+    color:#fff;
+  }
+  .dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;}
+  .dash-head span{font-size:12px;font-weight:700;color:#A9ACD9;letter-spacing:0.04em;}
+  .dash-bars{display:flex;align-items:flex-end;gap:12px;height:130px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:22px;}
+  .dash-bars .bar{flex:1;border-radius:6px 6px 0 0;background:var(--blue-light);}
+  .dash-bars .bar.hi{background:var(--purple-light);}
+  .dash-kpis .kpi-row{padding:10px 0;font-size:14px;}
+  .dash-note{font-size:11.5px;color:#8386B8;font-style:italic;margin-top:10px;}
+
+  /* ---------- PORTFOLIO (ADS) ---------- */
+  .portfolio-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:26px;
+    margin-top:50px;
+  }
+  .p-card{
+    background:var(--card);
+    border-radius:18px;
+    padding:26px;
+    box-shadow:var(--shadow);
+  }
+  .p-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+  .p-card-head h4{font-size:16px;}
+  .tag{
+    font-size:9.5px;font-weight:700;letter-spacing:0.04em;
+    background:var(--tint-purple);color:var(--purple);
+    padding:6px 12px;border-radius:999px;
+  }
+  .tag.dark{background:rgba(255,255,255,0.12);color:#C7CAF3;}
+  .node-campaign{
+    background:var(--blue);color:#fff;
+    border-radius:10px;padding:12px 14px;
+    font-size:12.5px;font-weight:700;margin-bottom:12px;
+  }
+  .node-group{
+    background:var(--tint-blue);color:var(--blue);
+    border-radius:8px;padding:10px 14px;
+    font-size:11.5px;font-weight:700;margin-bottom:8px;
+  }
+  .kw-label{font-size:11px;font-weight:700;color:var(--purple);margin:16px 0 10px;}
+  .kw-pill{
+    border:1px solid #E1E4F7;border-radius:999px;
+    padding:9px 14px;font-size:11.5px;color:var(--text-gray);
+    margin-bottom:8px;
+  }
+  .adcopy-box{
+    background:var(--bg);border:1px solid #E1E4F7;border-radius:10px;
+    padding:16px;margin-top:6px;
+  }
+  .adcopy-box .headline{color:var(--blue);font-weight:700;font-size:13.5px;}
+  .adcopy-box .url{color:#1a7a3e;font-size:10.5px;margin:4px 0;}
+  .adcopy-box .desc{color:var(--text-gray);font-size:11.5px;line-height:1.5;}
+  .perf-card{background:var(--navy);color:#fff;}
+  .perf-bars{display:flex;align-items:flex-end;gap:8px;height:70px;margin-top:14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15);}
+  .perf-bars .bar{flex:1;border-radius:4px 4px 0 0;background:var(--blue-light);}
+  .perf-bars .bar.hi{background:var(--purple-light);}
+  .stat-row{display:flex;justify-content:space-between;padding:9px 0;font-size:12.5px;color:var(--text-gray);border-bottom:1px solid #F0F1FA;}
+  .stat-row:last-child{border-bottom:none;}
+  .stat-row strong{color:var(--text-dark);font-size:13.5px;}
+  .p-note{font-size:10.5px;color:var(--text-muted);font-style:italic;margin-top:14px;}
+
+  /* ---------- CANVA SERVICES ---------- */
+  .canva-services{background:#fff;}
+  .cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px;align-items:start;}
+  .poster-stack{display:flex;flex-direction:column;gap:18px;}
+  .poster-card{
+    border-radius:18px;padding:26px;color:#fff;position:relative;overflow:hidden;
+  }
+  .poster-card::after{
+    content:"";position:absolute;width:150px;height:150px;border-radius:50%;
+    background:rgba(255,255,255,0.14);top:-60px;right:-40px;
+  }
+  .poster-card h4{color:#fff;font-size:21px;margin-bottom:6px;position:relative;z-index:2;}
+  .poster-card p{color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:16px;position:relative;z-index:2;}
+  .poster-card .tag{position:relative;z-index:2;background:rgba(255,255,255,0.16);color:#fff;}
+  .poster-a{background:linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);}
+  .poster-b{background:linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);}
+
+  /* ---------- CANVA PORTFOLIO GRID ---------- */
+  .work-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px;
+  }
+  .work-card{
+    border-radius:16px;padding:24px;color:#fff;min-height:190px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    position:relative;overflow:hidden;
+  }
+  .work-card::after{
+    content:"";position:absolute;width:130px;height:130px;border-radius:50%;
+    background:rgba(255,255,255,0.14);top:-50px;right:-30px;
+  }
+  .work-card i{font-size:22px;position:relative;z-index:2;}
+  .work-top h4{color:#fff;font-size:19px;margin:14px 0 4px;position:relative;z-index:2;}
+  .work-top p{color:rgba(255,255,255,0.85);font-size:12.5px;position:relative;z-index:2;}
+  .work-tag{
+    align-self:flex-start;
+    background:rgba(255,255,255,0.16);
+    padding:6px 12px;border-radius:999px;
+    font-size:10px;font-weight:700;position:relative;z-index:2;
+  }
+  .c1{background:linear-gradient(135deg,#6D28D9,#8B5CF6);}
+  .c2{background:linear-gradient(135deg,#1E3A8A,#2c4fb0);}
+  .c3{background:linear-gradient(135deg,#8B5CF6,#a78bfa);}
+  .c4{background:linear-gradient(135deg,#3B5FE0,#5b7cf0);}
+  .c5{background:linear-gradient(135deg,#6D28D9,#4c1d95);}
+  .c6{background:linear-gradient(135deg,#1E3A8A,#1B1464);}
+  .work-caption{font-size:12.5px;color:var(--text-muted);font-style:italic;margin-top:28px;text-align:center;}
+
+  /* ---------- WHY CHOOSE ME ---------- */
+  .why{background:#fff;}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:50px;}
+  .why-card{
+    display:flex;align-items:center;gap:16px;
+    background:var(--bg);border-radius:14px;padding:20px 22px;
+  }
+  .why-card span{font-size:15px;font-weight:600;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:radial-gradient(circle at 80% 20%, #2a2196 0%, var(--navy) 55%, #120b4c 100%);
+    color:#fff;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    padding:130px 0;
+  }
+  .contact::before{
+    content:"";position:absolute;width:480px;height:480px;border-radius:50%;
+    background:rgba(139,92,246,0.28);bottom:-220px;left:-160px;
+  }
+  .contact-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;}
+  .contact i.rocket{font-size:40px;color:#C7B9FF;margin-bottom:24px;}
+  .contact h2{font-size:42px;color:#fff;margin-bottom:18px;}
+  .contact p{color:#C9CBEF;font-size:16.5px;margin-bottom:38px;}
+  .contact-chips{display:flex;justify-content:center;gap:14px;margin-top:40px;flex-wrap:wrap;}
+  .chip{
+    display:flex;align-items:center;gap:9px;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:999px;padding:11px 20px;
+    font-size:13px;font-weight:600;color:#EAEBFF;
+  }
+  footer{
+    background:#120b4c;color:#8386B8;
+    text-align:center;padding:28px 0;font-size:12.5px;
+  }
+  footer strong{color:#fff;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px){
+    .hero-inner, .about-grid, .services-grid, .cs-grid{grid-template-columns:1fr;}
+    .portfolio-grid, .work-grid{grid-template-columns:1fr 1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+    .menu-toggle{display:block;}
+    .hero h1{font-size:42px;}
+    section{padding:80px 0;}
+  }
+  @media (max-width: 600px){
+    .portfolio-grid, .work-grid, .service-list, .skills-grid{grid-template-columns:1fr;}
+    .hero{padding:150px 0 90px;}
+    .hero h1{font-size:34px;}
+    .section-title{font-size:28px;}
+    .wrap{padding:0 20px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important; animation:none !important;}
+  }
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav>
+    <div class="logo">Samar<span>.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#ads">Google Ads</a>
+      <a href="#canva">Canva Design</a>
+      <a href="#why">Why Me</a>
+    </div>
+    <a href="#contact" class="nav-cta">Order on Fiverr</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <div class="hero-badge"><i class="fa-brands fa-google"></i> Google Ads</div>
+        <div class="hero-badge"><i class="fa-solid fa-palette"></i> Canva Design</div>
+      </div>
+      <h1>Ads that get clicked.<br>Posters that get <em>noticed</em>.</h1>
+      <p class="lede">I'm Samar Sandhu, a junior digital marketer and Canva designer helping small businesses run targeted Google Ads campaigns and stand out with scroll-stopping poster design.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Order Now on Fiverr</a>
+        <a href="#ads" class="btn btn-ghost">See my work</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>6.8%</strong><span>Sample CTR</span></div>
+        <div><strong>$0.42</strong><span>Sample Avg. CPC</span></div>
+        <div><strong>128</strong><span>Sample Conversions</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-head">
+        <span>CAMPAIGN OVERVIEW</span>
+        <i class="fa-solid fa-gauge-high" style="color:#A9ACD9;"></i>
+      </div>
+      <div class="mini-bars">
+        <div class="bar" style="height:40%"></div>
+        <div class="bar" style="height:65%"></div>
+        <div class="bar" style="height:50%"></div>
+        <div class="bar" style="height:85%"></div>
+        <div class="bar" style="height:70%"></div>
+        <div class="bar hi" style="height:100%"></div>
+        <div class="bar" style="height:60%"></div>
+      </div>
+      <div class="kpi-row"><span>CTR</span><strong>6.8%</strong></div>
+      <div class="kpi-row"><span>Avg. CPC</span><strong>$0.42</strong></div>
+      <div class="kpi-row"><span>Conversions</span><strong>128</strong></div>
+      <div class="hero-card-note">*Sample dashboard visual for illustration</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-card reveal">
+      <div class="avatar">SS</div>
+      <h3>Samar Sandhu</h3>
+      <p class="role">Junior Digital Marketer &amp; Canva Designer</p>
+      <ul class="about-focus">
+        <li><span class="icon-sm"><i class="fa-solid fa-bullseye"></i></span> Google Ads</li>
+        <li><span class="icon-sm"><i class="fa-solid fa-palette"></i></span> Canva Design</li>
+      </ul>
+    </div>
+    <div class="about-text reveal">
+      <div class="eyebrow">Get to know me</div>
+      <h2 class="section-title">About me</h2>
+      <p>I am a junior digital marketer and Canva designer with practical experience in digital marketing, advertising and creative content. I focus on clean campaign structures and scroll-stopping visuals that help small businesses grow.</p>
+      <div class="skills-title">My skills</div>
+      <div class="skills-grid">
+        <div class="skill-card"><div class="skill-icon b"><i class="fa-solid fa-bullseye"></i></div><span>Google Ads</span></div>
+        <div class="skill-card"><div class="skill-icon p"><i class="fa-solid fa-magnifying-glass"></i></div><span>Keyword Research</span></div>
+        <div class="skill-card"><div class="skill-icon b"><i class="fa-solid fa-layer-group"></i></div><span>Campaign Setup</span></div>
+        <div class="skill-card"><div class="skill-icon p"><i class="fa-solid fa-pen-nib"></i></div><span>Ad Copywriting</span></div>
+        <div class="skill-card"><div class="skill-icon b"><i class="fa-solid fa-palette"></i></div><span>Canva Poster Design</span></div>
+        <div class="skill-card"><div class="skill-icon p"><i class="fa-regular fa-image"></i></div><span>Social Media Post Design</span></div>
+        <div class="skill-card"><div class="skill-icon b"><i class="fa-solid fa-chart-line"></i></div><span>Basic SEO</span></div>
+        <div class="skill-card"><div class="skill-icon p"><i class="fa-solid fa-gears"></i></div><span>Content Optimization</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GOOGLE ADS SERVICES ================= -->
+<section class="services" id="ads">
+  <div class="wrap">
+    <div class="eyebrow">What I offer</div>
+    <h2 class="section-title">Google Ads services</h2>
+    <p class="section-lede">Clean, conversion-focused campaigns built from the ground up — keyword research through performance monitoring.</p>
+    <div class="services-grid">
+      <div class="service-list">
+        <div class="service-card reveal"><div class="skill-icon b"><i class="fa-brands fa-google"></i></div><strong>Google Search Ads</strong></div>
+        <div class="service-card reveal"><div class="skill-icon p"><i class="fa-solid fa-layer-group"></i></div><strong>Campaign Setup</strong></div>
+        <div class="service-card reveal"><div class="skill-icon b"><i class="fa-solid fa-magnifying-glass"></i></div><strong>Keyword Research</strong></div>
+        <div class="service-card reveal"><div class="skill-icon p"><i class="fa-solid fa-filter"></i></div><strong>Ad Group Creation</strong></div>
+        <div class="service-card reveal"><div class="skill-icon b"><i class="fa-solid fa-pen-nib"></i></div><strong>Ad Copy Creation</strong></div>
+        <div class="service-card reveal"><div class="skill-icon p"><i class="fa-solid fa-gears"></i></div><strong>Basic Campaign Optimization</strong></div>
+        <div class="service-card reveal"><div class="skill-icon b"><i class="fa-solid fa-bullseye"></i></div><strong>Conversion-Focused Structure</strong></div>
+        <div class="service-card reveal"><div class="skill-icon p"><i class="fa-solid fa-chart-bar"></i></div><strong>Performance Monitoring</strong></div>
+      </div>
+      <div class="dash-panel reveal">
+        <div class="dash-head"><span>CAMPAIGN OVERVIEW</span><i class="fa-solid fa-gauge-high"></i></div>
+        <div class="dash-bars">
+          <div class="bar" style="height:40%"></div>
+          <div class="bar" style="height:65%"></div>
+          <div class="bar" style="height:50%"></div>
+          <div class="bar" style="height:85%"></div>
+          <div class="bar" style="height:70%"></div>
+          <div class="bar hi" style="height:100%"></div>
+          <div class="bar" style="height:60%"></div>
+        </div>
+        <div class="dash-kpis">
+          <div class="kpi-row"><span>CTR</span><strong>6.8%</strong></div>
+          <div class="kpi-row"><span>Avg. CPC</span><strong>$0.42</strong></div>
+          <div class="kpi-row"><span>Conversions</span><strong>128</strong></div>
+        </div>
+        <div class="dash-note">*Sample dashboard visual for illustration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GOOGLE ADS PORTFOLIO ================= -->
+<section id="ads-portfolio" style="background:var(--bg);">
+  <div class="wrap">
+    <div class="eyebrow">Portfolio</div>
+    <h2 class="section-title">Google Ads — sample work</h2>
+    <p class="section-lede">A demo project showing how I structure a campaign end to end. Shown for illustration only.</p>
+    <div class="portfolio-grid">
+
+      <div class="p-card reveal">
+        <div class="p-card-head"><h4>Campaign Structure</h4><span class="tag">SAMPLE</span></div>
+        <div class="node-campaign">Campaign: Local Cafe Promo</div>
+        <div class="node-group">Ad Group: Coffee Near Me</div>
+        <div class="node-group">Ad Group: Cafe Breakfast Deals</div>
+        <div class="node-group">Ad Group: Best Coffee Shop</div>
+        <div class="kw-label">KEYWORDS (SAMPLE)</div>
+        <div class="kw-pill">coffee shop near me</div>
+        <div class="kw-pill">best cafe in town</div>
+        <div class="kw-pill">breakfast cafe deals</div>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="p-card-head"><h4>Sample Ad Copy</h4><span class="tag">SAMPLE</span></div>
+        <div class="adcopy-box">
+          <div class="headline">Fresh Coffee Near You | Order Online</div>
+          <div class="url">Ad · www.samplecafe.com</div>
+          <div class="desc">Freshly brewed coffee &amp; breakfast deals. Visit today or order online for fast pickup.</div>
+        </div>
+        <div class="kw-label" style="margin-top:22px;">PERFORMANCE SNAPSHOT</div>
+        <div class="perf-bars">
+          <div class="bar" style="height:35%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:50%"></div>
+          <div class="bar" style="height:75%"></div>
+          <div class="bar hi" style="height:90%"></div>
+          <div class="bar" style="height:65%"></div>
+        </div>
+        <div class="p-note">*Demo data — for illustration</div>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="p-card-head"><h4>Ad Dashboard</h4><span class="tag">SAMPLE</span></div>
+        <div class="stat-row"><span>Clicks</span><strong>1,204</strong></div>
+        <div class="stat-row"><span>Impressions</span><strong>38,560</strong></div>
+        <div class="stat-row"><span>CTR</span><strong>3.12%</strong></div>
+        <div class="stat-row"><span>Avg. CPC</span><strong>$0.38</strong></div>
+        <div class="stat-row"><span>Conversions</span><strong>96</strong></div>
+        <div class="stat-row"><span>Cost</span><strong>$457.60</strong></div>
+        <div class="p-note">*Illustrative demo data — not an actual client result</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CANVA POSTER DESIGN ================= -->
+<section class="canva-services" id="canva">
+  <div class="wrap">
+    <div class="eyebrow">Creative services</div>
+    <h2 class="section-title">Canva poster design</h2>
+    <p class="section-lede">Every poster is custom-built in Canva, matched to your brand colors, fonts and message.</p>
+    <div class="cs-grid">
+      <div class="service-list">
+        <div class="service-card reveal"><div class="skill-icon p"><i class="fa-solid fa-briefcase"></i></div><strong>Business Promotions</strong></div>
+        <div class="service-card reveal"><div class="skill-icon b"><i class="fa-regular fa-image"></i></div><strong>Social Media Posts</strong></div>
+        <div class="service-card reveal"><div class="skill-icon p"><i class="fa-solid fa-tag"></i></div><strong>Offers &amp; Discounts</strong></div>
+        <div class="service-card reveal"><div class="skill-icon b"><i class="fa-solid fa-calendar-days"></i></div><strong>Event Posters</strong></div>
+        <div class="service-card reveal"><div class="skill-icon p"><i class="fa-solid fa-cart-shopping"></i></div><strong>Product Promotions</strong></div>
+        <div class="service-card reveal"><div class="skill-icon b"><i class="fa-solid fa-graduation-cap"></i></div><strong>Educational Posts</strong></div>
+      </div>
+      <div class="poster-stack">
+        <div class="poster-card poster-a reveal">
+          <h4>Summer Sale</h4>
+          <p>Up to 50% Off</p>
+          <span class="tag">SAMPLE DESIGN</span>
+        </div>
+        <div class="poster-card poster-b reveal">
+          <h4>Grand Opening</h4>
+          <p>This Weekend Only</p>
+          <span class="tag">SAMPLE DESIGN</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CANVA PORTFOLIO GRID ================= -->
+<section id="canva-portfolio" style="background:var(--bg);">
+  <div class="wrap">
+    <div class="eyebrow">Portfolio</div>
+    <h2 class="section-title">My Canva work</h2>
+    <p class="section-lede">Sample posters across different industries, made to showcase style and layout.</p>
+    <div class="work-grid">
+      <div class="work-card c1 reveal">
+        <div class="work-top"><i class="fa-solid fa-utensils"></i><h4>Taste of Italy</h4><p>Fresh Pasta Daily</p></div>
+        <span class="work-tag">Restaurant · Sample</span>
+      </div>
+      <div class="work-card c2 reveal">
+        <div class="work-top"><i class="fa-solid fa-dumbbell"></i><h4>Fit Zone</h4><p>Join Today &amp; Save 20%</p></div>
+        <span class="work-tag">Gym · Sample</span>
+      </div>
+      <div class="work-card c3 reveal">
+        <div class="work-top"><i class="fa-solid fa-shirt"></i><h4>Urban Wear</h4><p>New Collection 2026</p></div>
+        <span class="work-tag">Clothing Brand · Sample</span>
+      </div>
+      <div class="work-card c4 reveal">
+        <div class="work-top"><i class="fa-solid fa-mug-hot"></i><h4>Brew &amp; Co.</h4><p>Your Daily Coffee Fix</p></div>
+        <span class="work-tag">Cafe · Sample</span>
+      </div>
+      <div class="work-card c5 reveal">
+        <div class="work-top"><i class="fa-solid fa-chart-line"></i><h4>Growth Labs</h4><p>We Scale Your Brand</p></div>
+        <span class="work-tag">Digital Marketing Agency · Sample</span>
+      </div>
+      <div class="work-card c6 reveal">
+        <div class="work-top"><i class="fa-solid fa-cart-shopping"></i><h4>ShopEase</h4><p>Free Shipping This Week</p></div>
+        <span class="work-tag">E-commerce Store · Sample</span>
+      </div>
+    </div>
+    <p class="work-caption">All designs shown are original sample/demo work created to showcase style and layout.</p>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE ME ================= -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="eyebrow">The difference</div>
+    <h2 class="section-title">Why choose me?</h2>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="skill-icon b"><i class="fa-solid fa-check"></i></div><span>Professional and clean designs</span></div>
+      <div class="why-card reveal"><div class="skill-icon p"><i class="fa-solid fa-check"></i></div><span>Customized work</span></div>
+      <div class="why-card reveal"><div class="skill-icon b"><i class="fa-solid fa-handshake"></i></div><span>Client-focused approach</span></div>
+      <div class="why-card reveal"><div class="skill-icon p"><i class="fa-solid fa-eye"></i></div><span>Attention to detail</span></div>
+      <div class="why-card reveal"><div class="skill-icon b"><i class="fa-solid fa-clock"></i></div><span>Fast communication</span></div>
+      <div class="why-card reveal"><div class="skill-icon p"><i class="fa-solid fa-chart-line"></i></div><span>Digital marketing knowledge</span></div>
+      <div class="why-card reveal"><div class="skill-icon b"><i class="fa-solid fa-palette"></i></div><span>Creative Canva designs</span></div>
+      <div class="why-card reveal"><div class="skill-icon p"><i class="fa-solid fa-bullseye"></i></div><span>Google Ads knowledge</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <i class="fa-solid fa-rocket rocket"></i>
+    <h2>Let's grow your business</h2>
+    <p>Need Google Ads or professional Canva designs? I can help you create better advertising campaigns and eye-catching visual content.</p>
+    <a href="#top" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Order Now on Fiverr</a>
+    <div class="contact-chips">
+      <div class="chip"><i class="fa-regular fa-envelope"></i> Message Me on Fiverr</div>
+      <div class="chip"><i class="fa-regular fa-comment-dots"></i> Quick Response Time</div>
+      <div class="chip"><i class="fa-solid fa-star"></i> Client-Focused Service</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Samar Sandhu</strong> — Google Ads &nbsp;|&nbsp; Canva Design &nbsp;|&nbsp; Digital Marketing
+</footer>
+
+<script>
+  // Header background on scroll
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.querySelector('.nav-links');
+  menuToggle.addEventListener('click', () => {
+    const open = navLinks.style.display === 'flex';
+    navLinks.style.display = open ? 'none' : 'flex';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '64px';
+    navLinks.style.right = '20px';
+    navLinks.style.background = 'rgba(15,11,58,0.95)';
+    navLinks.style.padding = '18px 24px';
+    navLinks.style.borderRadius = '12px';
+    navLinks.style.gap = '16px';
+  });
+
+  // Reveal on scroll (with safety fallback in case IntersectionObserver is unavailable)
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+  // Failsafe: ensure nothing stays permanently hidden
+  setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 4000);
+</script>
+
+</body>
+</html>	
